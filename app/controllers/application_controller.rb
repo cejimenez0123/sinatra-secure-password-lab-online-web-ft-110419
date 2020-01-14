@@ -19,9 +19,9 @@ class ApplicationController < Sinatra::Base
   post "/signup" do
     #your code here
     if logged_in?
-      erb :login
+      redirect :login
     else
-      erb :failure
+      redirect :failure
     end
   end
 
