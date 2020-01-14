@@ -18,7 +18,11 @@ class ApplicationController < Sinatra::Base
 
   post "/signup" do
     #your code here
-
+    if logged_in?
+      erb :login
+    else 
+      erb :failure
+    end
   end
 
   get '/account' do
