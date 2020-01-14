@@ -18,7 +18,8 @@ class ApplicationController < Sinatra::Base
 
   post "/signup" do
     #your code here
-    if logged_in?
+    
+    if params[:username] != "" && params[:password] != ""
       redirect :login
     else
       redirect :failure
