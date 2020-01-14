@@ -20,7 +20,7 @@ class ApplicationController < Sinatra::Base
     #your code here
     if logged_in?
       erb :login
-    else 
+    else
       erb :failure
     end
   end
